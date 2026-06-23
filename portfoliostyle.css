@@ -298,8 +298,53 @@
 
 
 
+/* Projects section */
+.projects {
+  padding: 20px;
+}
 
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;       /* allows stacking on smaller screens */
+  gap: 20px;
+}
 
+.project-card {
+  flex: 1;
+  min-width: 280px;      /* ensures cards don’t shrink too much */
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.4);
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  color: #3b82f6;
+}
+
+.project-card p {
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.project-image {
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
 
 
 
@@ -325,10 +370,14 @@
 }
 
 .edu-card {
+  flex: 1;
+  min-width: 280px;      /* ensures cards don’t shrink too much */
   background-color: #1e1e1e;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
 }
 
 .edu-card h3 {
@@ -504,4 +553,3 @@ main {
 .social-links a:hover {
   color: rgb(177, 228, 197); /* Accent hover color */
 }
-
