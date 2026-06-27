@@ -7,6 +7,7 @@
   <title>My Portfolio</title>
 
   <link rel="stylesheet" href="portfoliostyle.css" />
+  <link rel="stylesheet" href="responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -25,7 +26,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#sertification">Sertifications</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <!-- Hamburger icon -->
@@ -44,7 +45,7 @@
         <a href="CV.pdf" class="btn secondary" target="_blank">DOWNLOAD CV</a>
       </div>
       <br>
-      <div class="hero-socail-links">
+      <div class="hero-social-links">
         <ul class="hero-social-links">
           <li>
             <a href="https://www.linkedin.com/in/sehantha-thathsiluni-3543121b5/">
@@ -113,42 +114,40 @@
       <p>// &nbsp; About Me</p>
       <hr>
     </div>
-    <div class="about">
+
+    <div class="about-content">
       <div class="about-image-leftsec">
         <img src="sehantha.png" alt="Profile Picture" class="profile-pic">
       </div>
+
+      <div class="about-text-rightsec">
+        <p class="about-text">I am a third-year ICT undergraduate with a strong interest in software
+          development, web technologies, and database systems. I enjoy transforming
+          ideas into practical solutions through clean code and modern design.
+          Currently, I am expanding my knowledge in full-stack development,
+          cloud technologies practices while building
+          real-world academic and personal projects.</p>
+
+        <dl class="about-grid">
+          <li class="about-item">
+            <h3>Technologies used</h3>
+            <p>+6</p>
+          </li>
+          <li class="about-item">
+            <h3>Academic Projects</h3>
+            <p>+3</p>
+          </li>
+          <li class="about-item">
+            <h3>Years learning Programming</h3>
+            <p>3+ years</p>
+          </li>
+        </dl>
+      </div>
     </div>
-
-    <div class="about-text-rightsec">
-      <p class="about-text">I am a third-year ICT undergraduate with a strong interest in software
-        development, web technologies, and database systems. I enjoy transforming
-        ideas into practical solutions through clean code and modern design.
-        Currently, I am expanding my knowledge in full-stack development,
-        cloud technologies practices while building
-        real-world academic and personal projects.</p>
-
-
-      <dl class="about-grid">
-        <li class="about-item">
-          <h3>Technologies used</h3>
-          <p>+6</p>
-        </li>
-        <li class="about-item">
-          <h3>Academic Projects</h3>
-          <p>+3</p>
-        </li>
-        <li class="about-item">
-          <h3>Years learning Programming</h3>
-          <p>3+ years</p>
-        </li>
-      </dl>
-    </div>
-
-
   </section>
 
 
-  <section class="Skills" id="skills">
+  <section class="skills" id="skills">
     <div class="sub-titles">
       <p>// &nbsp; Skills</p>
       <hr>
@@ -184,7 +183,7 @@
         <img src="portfolioo.png" alt="portfolio_web" class="project-image">
         <p>A responsive personal portfolio built with HTML, CSS, and JavaScript.
           Showcases my skills, education, and projects with a modern dark theme.</p>
-        <a href="https://github.com/Seha30/Portfolio.git" class="btn primary" target="blank">View Project</a>
+        <a href="https://github.com/Seha30/Portfolio.git" class="btn primary" target="_blank">View Project</a>
       </div>
 
       <!-- Project 2 -->
@@ -193,111 +192,82 @@
         <img src="tyre.png" alt="Tyre Management System" class="project-image">
         <p>A desktop application developed in VB.NET with MySQL integration.
           Features role-based login, customer management, and inventory tracking.</p>
-        <a href="https://github.com/Seha30/tyre_mgt.git" class="btn secondary" target="blank">View Details</a>
+        <a href="https://github.com/Seha30/tyre_mgt.git" class="btn secondary" target="_blank">View Details</a>
       </div>
-
-
-
+    </div>
   </section>
-
-  <section class="sertification" id="sertification">
-
-
-
-
-
-
-  </section>
-
 
   <section class="education" id="education">
     <div class="sub-titles">
       <p>// &nbsp; Education</p>
       <hr>
     </div>
-    <table class="edu-table">
-      <TR>
-        <div class="education-container">
-          <td>
-            <div class="edu-card">
-              <h3>Sabaragamuwa University of Sri Lanka</h3>
-              <p>Faculty of Social Sciences and Languages</p>
-              <p>B.A. (Hons) in ICT — Jul 2024 – Mar 2028</p>
-              <small>Focus: Information Technology, SPSS, VB.NET, WordPress</small>
+    <div class="education-container">
+      <div class="edu-card">
+        <h3>Sabaragamuwa University of Sri Lanka</h3>
+        <p>Faculty of Social Sciences and Languages</p>
+        <p>B.A. (Hons) in ICT — Jul 2024 – Mar 2028</p>
+        <small>Focus: Information Technology, SPSS, VB.NET, WordPress</small>
 
-              <a href="https://www.sab.ac.lk/" target="_blank" class="edu-logo">
-                <img src="Logo-SUSL.png" alt="Sabaragamuwa University Logo">
-              </a>
-
-            </div>
-          </td>
-          <td>
-            <div class="edu-card">
-              <h3>Aquinas College of Higher Studies</h3><br>
-              <p>Diploma in English Language & Literature — Mar 2020 – Dec 2023</p>
-              <small>Focus: Grammar, Literaturue , Reading and Speaking</small>
-              <a href="https://www.facebook.com/AquinasCollegeSL" target="_blank" class="edu-logo">
-                <img src="Aquinass_Logo.jpg" alt="Aquinas College Logo">
-              </a>
-            </div>
-
-          </td>
-      </TR>
-      <tr>
-        <td>
-          <div class="edu-card">
-            <h3>Ananda Sastralaya National School Mathugama</h3>
-            <p>A/L Arts Stream — Jul 2020 – Dec 2022</p>
-            <small>Results: 1A and 3Bs</small>
-
-            <a href="https://sastralaya.lk/" target="_blank" class="edu-logo">
-              <img src="ASM_Logo.jpg" alt="Ananda Sastralaya Logo">
-            </a>
-          </div>
-        </td>
-        <td>
-          <div class="edu-card">
-            <h3>Miriswatta National School Dodamgoda</h3>
-            <p>Grade 6–11 — Feb 2014 – Jul 2020</p>
-            <p>G.C.E.O/L — Dec 2019 </p>
-            <small>Results: 5As,2Bs. and 1C</small>
-            <a href="https://www.facebook.com/KDMNSmedia/" target="_blank" class="edu-logo">
-              <img src="DMNS_Logo.jpg" alt="Miriswatta National School Logo">
-            </a>
-          </div>
-        </td>
-      </tr>
+        <a href="https://www.sab.ac.lk/" target="_blank" class="edu-logo">
+          <img src="Logo-SUSL.png" alt="Sabaragamuwa University Logo">
+        </a>
       </div>
-  </section>
 
-  </table>
-  <section class="certifications" id="sertification">
+      <div class="edu-card">
+        <h3>Aquinas College of Higher Studies</h3>
+        <p>Diploma in English Language & Literature — Mar 2020 – Dec 2023</p>
+        <small>Focus: Grammar, Literature, Reading and Speaking</small>
+        <a href="https://www.facebook.com/AquinasCollegeSL" target="_blank" class="edu-logo">
+          <img src="Aquinass_Logo.jpg" alt="Aquinas College Logo">
+        </a>
+      </div>
+
+      <div class="edu-card">
+        <h3>Ananda Sastralaya National School Mathugama</h3>
+        <p>A/L Arts Stream — Jul 2020 – Dec 2022</p>
+        <small>Results: 1A and 3Bs</small>
+        <a href="https://sastralaya.lk/" target="_blank" class="edu-logo">
+          <img src="ASM_Logo.jpg" alt="Ananda Sastralaya Logo">
+        </a>
+      </div>
+
+      <div class="edu-card">
+        <h3>Miriswatta National School Dodamgoda</h3>
+        <p>Grade 6–11 — Feb 2014 – Jul 2020</p>
+        <p>G.C.E.O/L — Dec 2019 </p>
+        <small>Results: 5As, 2Bs and 1C</small>
+        <a href="https://www.facebook.com/KDMNSmedia/" target="_blank" class="edu-logo">
+          <img src="DMNS_Logo.jpg" alt="Miriswatta National School Logo">
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="certifications" id="certifications">
     <div class="sub-titles">
-      <p>// &nbsp; Sertifications</p>
+      <p>// &nbsp; Certifications</p>
       <hr>
     </div>
-    <div class="cert-card">
-      <ul>
-        <li>Web Design Using WordPress</li>
-        <li>Programming Fundamentals for Beginners using Python</li>
-        <li>Introduction to Python</li>
-        <li>Introduction to HTML</li>
-        <li>Web Development with HTML and CSS for Beginners</li>
-      </ul>
+    <div class="cert-container">
+      <div class="cert-card">
+        <ul>
+          <li>Web Design Using WordPress</li>
+          <li>Programming Fundamentals for Beginners using Python</li>
+          <li>Introduction to Python</li>
+          <li>Introduction to HTML</li>
+          <li>Web Development with HTML and CSS for Beginners</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-
-  </section>
-  <section class="contcat" id="contact">
+  <section class="contact" id="contact">
     <div class="sub-titles">
       <p>// &nbsp; Contact</p>
       <hr>
     </div>
-
-  </section>
-  <div class="container" id="contact">
-    <div class="left-section">
+    <div class="container">
+      <div class="left-section">
       <h1>Let's build something together.</h1>
       <p>Whether you have an internship opportunity, a project idea, or just want to connect — my inbox is always open.
       </p>
@@ -337,12 +307,9 @@
       <!-- LinkedIn icon with link -->
 
       <a href="https://github.com/Seha30"><i class="fab fa-github"></i></a>
-
-
       <a href="mailto:sehantha.thathsiluni8@gmail.com">
         <i class="fas fa-envelope"></i>
-
-        </li>
+      </a>
     </dl>
   </footer>
   <script src="script.js"></script>
