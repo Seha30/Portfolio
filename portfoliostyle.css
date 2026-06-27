@@ -1,191 +1,307 @@
-/* ========================= */
-/* GLOBAL RESET & BASE STYLES */
-/* ========================= */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #070316; /* dark theme */
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-
-/* NAVBAR */
+/* Navbar container */
 .navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  background-color: #0f0723;
-  color: aliceblue;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  width:100%;
+    display: flex;              /* Use flexbox for layout */
+    justify-content: space-between; /* Push logo left, links right */
+    align-items: center;        /* Vertically center items */
+    padding: 10px 20px;
+    background-color: #0f0723;     /* Example background */
+    color: aliceblue;
+    left:0;
+    top:0;  
+
 }
 
+/* Navigation links */
 .nav-links {
-  list-style: none;
-  display: none; /* hidden by default on mobile */
-  flex-direction: column;
-  gap: 15px;
-  margin: 0;
-  padding: 15px;
-  background-color: #111;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 220px;
-  border-radius: 8px;
+    list-style: none;           /* Remove bullets */
+    display: flex;              /* Arrange items in a row */
+    gap: 20px;                  /* Space between links */
+    margin: 0;
+    padding: 0;
+  
 }
 
-.nav-links.show {
-  display: flex;
-}
+/*Each link style as a box */
 
+/* Individual link styling */
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 8px 12px;
-  transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+   
+    transition:all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  color: rgb(177, 228, 197);
+.nav-links a:hover {
+    color: rgb(177, 228, 197);              /* Example hover effect */
 }
 
+/* Hide menu icon on desktop */
 .menu-icon {
-  display: block;
+  display: none;
   font-size: 28px;
   cursor: pointer;
   color: white;
 }
 
-/* Larger screens: show links inline */
-@media (min-width: 769px) {
+
+/* Responsive: show icon on small screens */
+@media (max-width: 768px) {
   .nav-links {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    background: none;
-    width: auto;
-    padding: 0;
+    display: none;              /* Hide links initially */
+    flex-direction: column;     /* Stack vertically when shown */
+    background-color: #333;
+    position: absolute;
+    top: 60px;                  /* Below navbar */
+    right: 0;
+    width: 200px;
+    padding: 10px;
   }
+
+  .nav-links.show {
+    display: flex;              /* Show when toggled */
+  }
+
   .menu-icon {
-    display: none;
+    display: block;             /* Show hamburger */
   }
 }
-
-/* ========================= */
-/* HERO SECTION */
-/* ========================= */
+/* === HERO SECTION CONTAINER === */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(135deg, #0a1f44, #1e3a8a);
-  color: #fff;
-  padding: 60px 5%;
-  text-align: center;
+  display: flex; /* Places text and image side by side */
+  align-items: center; /* Vertically centers content */
+  justify-content: space-between; /* Adds space between text and image */
+  background: linear-gradient(135deg, #0a1f44, #1e3a8a); /* Blue gradient background */
+  color: #fff; /* White text color */
+  padding: 80px 10%; /* Adds spacing around content */
 }
 
+/* === TEXT CONTENT STYLING === */
 .hero-contentr-left h3 {
-  font-size: 1rem;
-  color: #cbd5e1;
+  font-size: 1.2rem; /* Slightly smaller intro text */
+  color: #cbd5e1; /* Light gray-blue tone */
 }
 
 .hero-contentr-left h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 10px 0;
+  font-size: 2.8rem; /* Large main heading */
+  font-weight: 700; /* Bold for emphasis */
+  margin: 10px 0; /* Space above and below */
 }
 
 .hero-contentr-left p {
-  font-size: 1rem;
-  color: #93c5fd;
-  margin-bottom: 20px;
+  font-size: 1.1rem; /* Medium paragraph size */
+  color: #93c5fd; /* Soft blue accent color */
+  margin-bottom: 25px; /* Space before buttons */
 }
 
+/* === BUTTON GROUP === */
 .hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
+  display: flex; /* Aligns buttons horizontally */
+  gap: 15px; /* Space between buttons */
 }
 
+/* === BUTTON BASE STYLE === */
 .btn {
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  padding: 12px 25px; /* Button size */
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none; /* Removes underline */
+  font-weight: 600; /* Bold text */
+  transition: 0.3s; /* Smooth hover animation */
 }
 
+/* === PRIMARY BUTTON (Blue) === */
 .btn.primary {
-  background-color: #3b82f6;
-  color: #fff;
+  background-color: #3b82f6; /* Bright blue */
+  color: #fff; /* White text */
 }
 
+/* === SECONDARY BUTTON (Dark) === */
 .btn.secondary {
-  background-color: #6794dc;
-  color: #fff;
+  background-color: #6794dc; /* Dark navy tone */
+  color: #fff; /* White text */
 }
 
-.btn:hover,
-.btn:focus {
-  transform: scale(1.05);
+/* === BUTTON HOVER EFFECT === */
+.btn:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+.btn:hover::after {
+  animation: shine 0.8s;
 }
 
-/* ========================= */
-/* ABOUT SECTION */
-/* ========================= */
+@keyframes shine {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+.terminal{
+    width:100%;
+    max-width:650px;
+    background:#08111f;
+
+    border-radius:20px;
+    overflow:hidden;
+
+    border:1px solid rgba(0,150,255,.3);
+
+    box-shadow:
+    0 0 20px rgba(0,100,255,.25),
+    0 0 50px rgba(0,100,255,.15);
+}
+
+/* Header */
+
+.terminal-header{
+    height:55px;
+    background:#111827;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 20px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    margin-right:8px;
+}
+
+.red{
+    background:#ff5f56;
+}
+
+.yellow{
+    background:#ffbd2e;
+}
+
+.green{
+    background:#27c93f;
+}
+
+.terminal-title{
+    margin-left:auto;
+
+    color:#00ff99;
+    font-family:monospace;
+}
+
+/* Body */
+
+.terminal-body{
+    padding:30px;
+
+    font-family:Consolas, monospace;
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+.command{
+    color:#00ff99;
+    margin:15px 0 5px;
+}
+
+.output{
+    color:white;
+    margin-left:20px;
+}
+
+/* Cursor */
+
+.cursor{
+    display:inline-block;
+
+    width:10px;
+    height:20px;
+
+    background:#00ff99;
+
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
+
+/*hero social links*/
+
+.hero-social-links {
+  list-style: none; /* Remove bullets */
+  display: flex;
+  justify-content:flex-start;
+  gap: 20px;
+  padding: 0;
+  margin: 10px 0 0 0;
+  color:rgb(239, 239, 241)
+}
+
+.social-links a:hover {
+  color: rgb(177, 228, 197); /* Accent hover color */
+}
+
+.social-links i {
+  transition: color 0.3s ease;
+}
+
+
+
+
+/* About section container */
 .about {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 30px;
+  display: flex;               /* enables side-by-side layout */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;                   /* space between left and right parts */
+  padding: 40px;
 }
 
+/* Left side (image) */
 .about-image-leftsec {
-  flex: 1 1 100%;
+  flex: 1;                     /* takes half the space */
   display: flex;
-  justify-content: center;
+  justify-content: center;     /* center image horizontally */
 }
 
 .profile-pic {
-  width: 100%;
-  max-width: 250px;
+  width: 100%;                 /* responsive width */
+  max-width: 280px;            /* limit size */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(59,130,246,0.5);
 }
 
+/* Right side (text + cards) */
 .about-text-rightsec {
-  flex: 1 1 100%;
-  font-size: 18px;
+  flex: 2;       
+  size: 25px;              /* takes more space than image */
 }
 
-.about-grid {
-  display: flex;
-  flex-wrap: wrap;
+.about-text{
+ font-size: 20px;
+}
+
+
+
+/* Cards grid inside right section */
+
+.about-grid{
+   display: flex;
+  flex-wrap: wrap;       /* allows stacking on smaller screens */
   gap: 20px;
+
 }
 
-.about-item {
-  flex: 1 1 calc(50% - 20px);
-  min-width: 250px;
+
+.about-item{
+   flex: 1;
+   list-style: none;
+  min-width: 280px;      /* ensures cards don’t shrink too much */
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 12px;
@@ -193,49 +309,104 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(59,130,246,0.4);
+/*skill section*/
+.skills{
+  padding:30px
 }
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;       /* allows stacking on smaller screens */
+  gap: 20px;
+}
+.skill-card {
+  flex: 1;
+  min-width: 280px;      /* ensures cards don’t shrink too much */
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-/* ========================= */
-/* SKILLS & PROJECTS */
-/* ========================= */
-.skills, .projects {
+}
+/* Projects section */
+.projects {
   padding: 30px;
 }
 
-.skills-container, .projects-container {
+.projects-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;       /* allows stacking on smaller screens */
   gap: 20px;
 }
 
-.skill-card, .project-card {
-  flex: 1 1 calc(50% - 20px);
-  min-width: 220px;
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-card {
+flex: 1;
+    min-width: 220px;   /* allow smaller cards */
+    max-width: 260px;   /* optional: cap maximum width */
+    background-color: #1e1e1e;
+    padding: 8px 12px;  /* reduce padding for lower height */
+    border-radius: 8px; /* slightly smaller corners */
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover, .skill-card:hover {
+.project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(59,130,246,0.4);
 }
 
+.project-card h3 {
+  margin: 0 0 10px;
+  color: #3b82f6;
+}
+
+.project-card p {
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+}
+
 .project-image {
-  width: 100%;
+  width: 70%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
 }
 
-/* ========================= */
-/* EDUCATION SECTION */
-/* ========================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Education Section */
+
+.edu-table {
+    width: 100%;           /* make the table span full width */
+    border-collapse: collapse; /* cleaner spacing */
+}
+
+.edu-table td {
+    width: 50%;            /* each cell takes half width (2 per row) */
+    vertical-align: top;   /* align cards to the top */
+    padding: 10px;         /* spacing between cells */
+    height:15px;
+}
+
+
 .education-container {
   display: flex;
   flex-direction: column;
@@ -244,47 +415,103 @@ body {
 }
 
 .edu-card {
-  position: relative;
-  padding: 20px;
-  padding-right: 120px;
-  border-radius: 12px;
+  flex: 1 1 48%;   /* about half width each */
+ min-width: unset;       /* remove the minimum width restriction */
+    max-width: none;        /* allow it to expand fully */
   background-color: #1e1e1e;
+  padding: 10px 12px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
 }
 
+.edu-card h3 {
+  margin: 0;
+    font-size: 1rem;    /* smaller heading */
+    color: #3b82f6;
+}
+
+.edu-card p {
+  margin: 5px 0;
+  color: #ddd;
+}
+
+.edu-card small {
+  color: #93c5fd; /* soft blue */
+}
+
+
+
+/* Container for the cards */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds space between your cards */
+}
+
+/* The individual education card */
+.edu-card {
+  position: relative; /* Allows the logo to position itself relative to this card */
+  padding: 20px;
+  padding-right: 140px; /* Creates space on the right so text doesn't overlap the logo */
+  border: 1px solid #ccc; /* Optional: just for visualization */
+  border-radius: 12px;     /* Optional */
+  min-height: 150px;      /* Ensures the card has enough height */
+}
 .edu-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(59,130,246,0.4);
 }
 
+/* The logo link wrapper */
 .edu-logo {
   position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 20px;       /* Spacing from the right edge of the card */
+  top: 50%;          /* Moves the top of the logo to the vertical center */
+  transform: translateY(-50%); /* Perfectly centers the logo vertically */
 }
 
+/* The logo image itself */
 .edu-logo img {
-  width: 70px;
-  height: auto;
+  width: 80px;       /* Set a fixed width for uniformity */
+  height: auto;      /* Keeps the aspect ratio intact */
+  display: block;
 }
 
-/* ========================= */
-/* CONTACT FORM */
-/* ========================= */
+.edu-table {
+    margin: 0 auto;  /* Centers the table horizontally */
+     border-collapse: separate;
+  border-spacing: 20px;     /* spacing between cells/cards */
+    
+}
+
+
+
+
+
+
+
+/* === GENERAL STYLES === */
+body {
+  background-color: #070316; /* dark theme */
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 30px;
+  display: flex;              /* enables two-column layout */
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
 }
 
-.left-section, .right-section {
-  flex: 1 1 100%;
+.left-section {
+  flex: 1;                    /* takes half the space */
+  margin-right: 40px;
 }
 
 .right-section {
+  flex: 1;                    /* takes the other half */
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 8px;
@@ -293,51 +520,88 @@ body {
 input, textarea {
   width: 100%;
   margin-bottom: 15px;
-  padding: 12px;
+  padding: 10px;
   border: none;
   border-radius: 4px;
 }
 
 button {
-  background-color: #11475d;
+  background-color: #11475d;  /* purple accent */
   color: #fff;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover, button:focus {
+button:hover {
   background-color: #8ddaf4;
 }
 
-/* ========================= */
-/* FOOTER */
-/* ========================= */
+.sub-titles{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sub-titles p{
+    color: white;
+    font-size: 15px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.sub-titles hr{
+    flex: 1;
+    border: none;
+    height: 2px;
+    background: #00bfff;
+     border-top: 2px solid #3b82f6; /* visible line */
+  margin: 10px 0 20px 0;         /* top/right/bottom/left spacing */
+  width: 60%;                    /* shorter line so it doesn’t collide with right section */
+}
+
+
+
+/* Reset body spacing */
+body {
+  margin: 0;
+  padding: 0;
+   min-height: 100vh;          /* ensures body covers full viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;                    /* pushes footer down */
+  padding-bottom: 80px;       /* space for the form/button */
+}
+
+
 .footer {
   background-color: #0f0723;
   color: white;
   text-align: center;
   padding: 20px;
+  position: relative;
+  bottom: auto;
   width: 100%;
 }
-
 .social-links {
-  list-style: none;
+  list-style: none; /* Remove bullets */
   display: flex;
-  justify-content: center;
+  justify-content:center;
   gap: 20px;
   padding: 0;
   margin: 10px 0 0 0;
-  color: aqua;
+  color:aqua
 }
 
-.social-links a:hover,
-.social-links a:focus {
-  color: rgb(177, 228, 197);
+.social-links a:hover {
+  color: rgb(177, 228, 197); /* Accent hover color */
 }
 
-/* ========================= */
+
 /* MEDIA QUERIES */
 /* ========================= */
 @media (min-width: 480px) {
