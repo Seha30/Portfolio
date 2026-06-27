@@ -62,6 +62,7 @@ No additional software or installation is required.
 - Skills
 - Projects
 - Education
+- Sertifications
 - Contact
 
 ## 📂 Projects Featured
